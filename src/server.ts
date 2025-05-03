@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import eventRoutes from './routes/eventRoutes';
 
-// Load environment variables from .env file
+// Load from .env 
 dotenv.config();
 
 const app = express();
@@ -13,12 +13,12 @@ mongoose.connect(process.env.MONGO_URI!)
   .then(() => console.log('MongoDB connected successfully!'))
   .catch((err) => console.log('MongoDB connection error:', err));
 
-// Middleware for parsing JSON
+// Middleware 
 app.use(express.json());
 
 app.use('/api', eventRoutes);
 
-// Start server
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
