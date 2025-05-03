@@ -24,7 +24,7 @@ A simple RESTful API for managing events, built using **Node.js**, **Express**, 
 ---
 
 ## Project Structure
-
+```
 event-api/
 ├── src/
 │ ├── models/
@@ -37,7 +37,7 @@ event-api/
 ├── .env
 └── README.md
 
-
+```
 
 ---
 
